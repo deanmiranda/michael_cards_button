@@ -5,45 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Card Layout</title>
+    <title>Three Component Layout</title>
 </head>
 
 <body>
     <main>
+        <!-- Cards Container -->
         <section class="card-container">
             <article class="card" style="background-image: url('https://placecats.com/300/400');">
                 <div class="card-content">
-                    <h3 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h3>
-                    <div class="button-container">
-                        <a href="#" class="action-button" aria-label="Read more about Case Study">
-                            Read the Blog
-                        </a>
-                        <div class="hover-shadow"></div>
+                  <div class="card-content">
+                    <h3 class="card-title">Card Title 1</h3>
+                    <div class="button-wrapper">
+                        <div class="button-interaction-area">
+                            <a href="#" class="action-button" aria-label="Learn more about Card 1">
+                                Learn More
+                            </a>
+                            <div class="hover-shadow"></div>
+                        </div>
                     </div>
+                </div>
                 </div>
             </article>
             <article class="card" style="background-image: url('https://placecats.com/300/400');">
                 <div class="card-content">
-                    <h3 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h3>
-                    <div class="button-container">
-                        <a href="#" class="action-button" aria-label="Read more about Articles">
-                            Case Study
-                        </a>
-                        <div class="hover-shadow"></div>
+                    <h3 class="card-title">Card Title 2</h3>
+                    <div class="button-wrapper">
+                        <div class="button-interaction-area">
+                            <a href="#" class="action-button" aria-label="Learn more about Card 1">
+                                Learn More
+                            </a>
+                            <div class="hover-shadow"></div>
+                        </div>
                     </div>
                 </div>
             </article>
-            <article class="card" style="background-image: url('https://placecats.com/300/400');">
-                <div class="card-content">
-                    <h3 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h3>
-                    <div class="button-container">
-                        <a href="#" class="action-button" aria-label="Read more about Read the Blog">
-                            Articles
-                        </a>
-                        <div class="hover-shadow"></div>
+        </section>
+
+        <!-- 50/50 Split -->
+        <section class="split-component">
+            <div class="split-image" style="background-image: url('https://placecats.com/600/400');"></div>
+            <div class="split-content">
+                <h2 class="split-title">50/50 Split Title</h2>
+                <p class="split-description">This is a description for the 50/50 split component.</p>
+                 <div class="button-wrapper">
+                        <div class="button-interaction-area">
+                            <a href="#" class="action-button" aria-label="Learn more about Card 1">
+                                Learn More
+                            </a>
+                            <div class="hover-shadow"></div>
+                        </div>
                     </div>
-                </div>
-            </article>
+            </div>
+        </section>
+
+        <!-- Hero -->
+        <section class="hero-component" style="background-image: url('https://placecats.com/800/400');">
+            <div class="hero-content">
+                <h1 class="hero-title">Hero Component Title</h1>
+                <p class="hero-description">This is a description for the full-width hero component.</p>
+                 <div class="button-wrapper">
+                        <div class="button-interaction-area">
+                            <a href="#" class="action-button" aria-label="Learn more about Card 1">
+                                Learn More
+                            </a>
+                            <div class="hover-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="button-wrapper button-wrapper--full-width">
+                        <div class="button-interaction-area">
+                            <a href="#" class="action-button" aria-label="Learn more about Card 1">
+                                Learn More
+                            </a>
+                            <div class="hover-shadow"></div>
+                        </div>
+                    </div>
+                    
+            </div>
+            
+                    <div class="button-wrapper button-wrapper--full-width">
+                        <div class="button-interaction-area">
+                            <a href="#" class="action-button" aria-label="Learn more about Card 1">
+                                Learn More
+                            </a>
+                            <div class="hover-shadow"></div>
+                        </div>
+                    </div>
         </section>
     </main>
     <script src="scripts.js"></script>

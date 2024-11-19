@@ -1,43 +1,32 @@
-const cards = document.querySelectorAll('.card');
+document.querySelectorAll('.button-wrapper').forEach(wrapper => {
+  const shadow = wrapper.querySelector('.hover-shadow');
+  const button = wrapper.querySelector('.action-button');
 
-cards.forEach((card) => {
-  const cursor = card.querySelector('.hover-shadow');
+  wrapper.addEventListener('mousemove', (e) => {
+      const rect = wrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    cursor.style.left = `${x - 250}px`;
-    cursor.style.top = `${y -175}px`;
-    cursor.style.opacity = 1;
+      shadow.style.left = `${x - 170}px`;
+      shadow.style.top = `${y - 70}px`;
+      shadow.style.opacity = 1;
+      shadow.style.transform = 'scale(1)';
   });
 
-  card.addEventListener('mouseleave', () => {
-    cursor.style.opacity = 0;
-  });
-});
-
-const buttons = document.querySelectorAll('.action-button');
-
-buttons.forEach((button) => {
-  button.addEventListener('focus', (e) => {
-    const card = button.closest('.card');
-    const cursor = card.querySelector('.hover-shadow');
-
-    const rect = card.getBoundingClientRect();
-    const x = rect.width / 2;
-    const y = rect.height / 2;
-
-    cursor.style.left = `${x - 235}px`;
-    cursor.style.top = `${y - 150}px`;
-    cursor.style.opacity = 1;
+  wrapper.addEventListener('mouseleave', () => {
+      shadow.style.opacity = 0;
+      shadow.style.transform = 'scale(0)';
   });
 
-  button.addEventListener('blur', (e) => {
-    const card = button.closest('.card');
-    const cursor = card.querySelector('.hover-shadow');
+  button.addEventListener('focus', () => {
+      shadow.style.left = '50%';
+      shadow.style.top = '50%';
+      shadow.style.transform = 'translate(-50%, -50%) scale(1)';
+      shadow.style.opacity = 1;
+  });
 
-    cursor.style.opacity = 0;
+  button.addEventListener('blur', () => {
+      shadow.style.opacity = 0;
+      shadow.style.transform = 'scale(0)';
   });
 });
